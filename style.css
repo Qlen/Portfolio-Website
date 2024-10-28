@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Prompt', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+html, 
+body {
+    height: 100%; /* กำหนดความสูงให้เต็ม */
+    margin: 0; /* ลด margin เป็น 0 */
+    overflow-y: auto; /* แสดง scroll bar แนวตั้งถ้าจำเป็น */
+    overflow-x: hidden; /* ปิด scroll bar แนวนอน */
+    width: 100%; /* กำหนดความกว้างให้เต็ม */
+    background-image: url(img/back.jpg); /* ตั้งค่าภาพพื้นหลัง */
+    background-size: cover; /* ทำให้ภาพพื้นหลังครอบคลุม */
+    color: rgb(0, 0, 0); /* สีข้อความ */
+}   
+
+
+header {
+    margin-left: 20;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: white;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+nav a {
+    font-size: 1.1rem;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.About-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Home-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Education-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Skill-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Performance-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Contact-Port {
+    border-bottom: 3px solid;
+}
+
+nav a:hover,
+nav a.Home-Port {
+    border-bottom: 3px solid;
+}
+
+@media(max-width:995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid;
+        border-bottom: 3px solid;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: white;
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav.About-Port {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.About-Port {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 4.5rem;
+    color: #381a8b;
+    text-shadow: 2px 2px 10px rgba(80, 12, 126, 0.5);
+}
+
+section {
+    min-height: 100%;
+    padding: 5rem 9% 5rem;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+    gap: 7rem;
+}
+
+.about .about-content h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.yellow {
+    color: rgb(255, 171, 14);
+}
+
+.dark-yellow {
+    color: #FFA500;
+}
+
+.red{
+    color: red;
+}
+
+.text-weight {
+    font-weight: 800;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.about-content p {
+    word-spacing: 5px;
+    font-size: 1.6rem;
+}
+
+.about-img {
+    border-radius: 50%;
+}
+
+.about-img img {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgb(253, 209, 65);
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.history {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.history span {
+    width: 190px;
+    display: inline-block;
+    font-weight: 6 00;
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.Home .Home-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.Home-content h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.Home .Home-content h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.Home-content p {
+    word-spacing: 5px;
+    font-size: 1.6rem;  
+}
+
+.Home-img {
+    border-radius: 50%;
+}
+
+.btn {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: aqua;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid aqua;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: aqua;
+    color: black;
+    box-shadow: 0 0 25px aqua;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    border: 0.2rem solid black;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 2rem 1.5rem 2rem 0;
+    transition: 0.3s ease;
+    color: aqua;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: aqua;
+    box-shadow: 0 0 25px aqua;
+}
+
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+
+.title-Education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 3rem;
+    color: #381a8b;
+    text-shadow: 2px 2px 10px rgba(80, 12, 126, 0.5);
+}
+
+.container-top{
+    display: flex;
+    height: 35%;
+    background-color: transparent;
+    white-space: nowrap
+}
+
+.container-bottom{
+    display: flex;
+    height: 35%;
+    background-color: transparent;
+    white-space: nowrap
+}
+
+.jongmin-top{
+    display: flex;
+    text-align: center; 
+}
+
+.anuban-top{
+    display: flex;
+    margin-left: -205px;
+}
+
+.school-ton{
+    display: flex;
+}
+
+.school-pray{
+            display: flex;
+    margin-left: -200px;
+}
+    
+.school-content{
+    margin-left: 7rem;
+    margin-top: 60px;
+}
+
+.school-content h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.school-content p{
+    font-size: 1.3rem; 
+    text-align: center;
+}
+
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+/* ************************************************************ */
+
+.title-competitive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2995dd;
+    text-shadow: 2px 2px 10px rgba(42, 205, 255, 0.5);
+    gap: 3rem;
+}
+
+.battle-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.battle-img img {
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+.Battlebots {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.title-battlebot-content h1:first-of-type{
+    margin-top: 1rem;
+}
+
+.title-battlebot-content h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.battle-content-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.หน้าที่{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 1.1rem;
+}
+
+.หน้าที่ li{
+    font-size: 1.3rem;
+}
+
+.การแข่งขัน{
+    margin-top: 1rem;
+    margin-right: 3rem;
+    font-size: 1.1rem;  
+}
+
+.การแข่งขัน p{
+    font-size:  1.3rem;
+}
+
+.battle-content-bottom {
+    margin-top: 20px;
+}
+
+.สรุป{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.สรุป p{
+    font-size: 1.3rem;
+}
+
+/* ************************************************************ */
+/* ************************************************************ */
+
+.ศิลปะ-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.ศิลปะ-img img {
+    max-height: 250px;
+    width: auto;
+}
+
+.ศิลปะ {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.title-ศิลปะ-content h1:first-of-type{
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.title-ศิลปะ-content h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.หน้าที่-ศิลปะ{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 1.1rem;
+    align-content: center;
+}
+
+.หน้าที่-ศิลปะ li{
+    font-size: 1.3rem;
+}
+
+.ขั้นตอน{
+    margin-top: 1rem;
+    margin-right: 3rem;
+    font-size: 1.1rem;  
+}
+
+.ขั้นตอน li{
+    font-size:  1.3rem;
+}
+
+.battle-content-bottom {
+    margin-top: 20px;
+}
+
+/* ************************************************************ */
+/* ************************************************************ */
+
+.สอบ-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.สอบ-img img {
+    max-height: 600px;
+    width: auto;
+}
+
+.สอบ {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.title-สอบ-content h1:first-of-type{
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.title-สอบ-content h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.สอบ-รายละเอียด{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 1.1rem;
+    align-content: center;
+}
+
+.สอบ-รายละเอียด p{
+    font-size:  1.4rem;
+}
+
+/*******************************************************/
+
+.Activity-grid-top {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 3000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 45px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.activity-img {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.activity-img img {
+    max-width: 400px;
+    height: auto;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px ;
+    justify-content: center;
+}
+
+.title-act h3{
+    display: flex;
+    justify-content: center;
+}
+
+.title-act p{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.activity1 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity2 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity3 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity4 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity5 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity6 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity7 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity8 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity9 {
+    background-color: #ffffff;
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity10 {
+    background-color: #ffffff;
+    height: 1100px;
+    width: 1500px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Con {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.Con img {
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px ;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.activity10 div h3{
+    font-size: 2rem;
+}
+
+.activity10 div p{
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+}
+
+/***************************************************************************************/
+/***************************************************************************************/
+/***************************************************************************************/
+/***************************************************************************************/
+/***************************************************************************************/
+
+.SketchUp {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 1000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.SketchUp .title-competitive{
+    margin-top: 1rem;
+}
+
+.app-img img{
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    height: 10vh;
+    margin-top: 1rem;
+}
+.ผลงาน-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: 3rem;
+}
+
+.ผลงาน-img img{
+    max-height: 300px;
+    width: auto;
+}
+
+.Fusion {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 1000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.Fusion .title-competitive{
+    margin-top: 1rem;
+}
+
+.Fusion .title-competitive h1{
+    color: #dd6b29;
+    text-shadow: 2px 2px 10px rgba(255, 102, 42, 0.5);
+}  
+
+.SolidWork {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 1000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.SolidWork .title-competitive{
+    margin-top: 1rem;
+}
+
+.SolidWork .title-competitive h1{
+    color: #dd3e29;
+    text-shadow: 2px 2px 10px rgba(255, 42, 42, 0.5);
+}   
+
+.Python {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 1000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.Python .title-competitive{
+    margin-top: 1rem;
+}
+
+.C {
+    background-color: #e9e9e9; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 1000px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+}
+
+.C .title-competitive{
+    margin-top: 1rem;
+}
+
+.title-contact{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.email h3{
+    font-size: 2rem;
+}
+
+.email a{
+    font-size: 1.5rem;
+}
+
+.phone h3{
+    font-size: 2rem;
+}
+
+.phone a{
+    font-size: 1.5rem;
+}
+
+.address h3{
+    font-size: 2rem;
+}
+
+.address p{
+    font-size: 1.5rem;
+}
+
+.other{
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.other h3{
+    font-size: 2rem;
+}
+
+.social-icon{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.contact-content {
+    background-color: transparent; /* สีพื้นหลังที่ต้องการ เช่น สีเทาอ่อน */
+    background-size: auto 1500px;height: 700px;
+    background-position: center; /* จัดภาพให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 150px; /* เพิ่มพื้นที่ภายในให้กับเนื้อหา */
+    border-radius: 8px; /* เพิ่มมุมโค้งให้กับพื้นหลัง (ถ้าต้องการ) */
+    margin-bottom: 5rem ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: black;
+    border: 0.2rem solid black;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 2rem 1.5rem 2rem 0;
+    transition: 0.3s ease;
+    color: aqua;
+}
+
+.social-icon a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: aqua;
+    box-shadow: 0 0 25px aqua;
+}
